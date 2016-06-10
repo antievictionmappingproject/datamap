@@ -1,0 +1,6 @@
+
+* 2016-03-09 13:32:15.069019 :  Scanning BlockLot_with_LatLon.csv
+* 2016-03-09 14:03:31.633102 :    winner: 441 MASON ST (2390). scanned lines: 97390
+* 2016-03-09 14:03:31.633186 :    writing bcounts
+* 2016-03-09 14:03:33.918168 :    saving 71274 buildings to db
+* 2016-03-09 14:03:49.490672 :  goodbye

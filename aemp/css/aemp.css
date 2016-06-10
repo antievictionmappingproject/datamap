@@ -1,0 +1,59 @@
+a {
+	text-decoration: none;
+	color: blue;
+	cursor: pointer;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+#sbitems {
+	float: right;
+	height: 100%;
+	width: 20%;
+	background: pink;
+}
+
+#sbpanel {
+	height: 100%;
+	width: 80%;
+	background: gray;
+}
+
+#map {
+	position: absolute;
+	top: 40px;
+	bottom: 10px;
+	right: 10px;
+	left: 10px;
+}
+
+#dbpanels {
+	bottom: 10px;
+}
+
+#dbmin {
+	top: 40px;
+}
+
+#dbmin>div {
+	display: block !important;
+	max-height: 20px !important;
+	overflow: hidden;
+}
+
+.maptop {
+	position: absolute;
+	z-index: 100;
+	left: 10px;
+}
+
+.qsnode {
+	display: table-cell;
+	padding: 5px;
+	width: 220px;
+	max-height: 220px;
+	border: 1px solid black;
+	background: white;
+}

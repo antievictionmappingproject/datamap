@@ -1,0 +1,9 @@
+{'buildings': {'address': 'WONG FAMILY TRUST SAN FRANCISCO CA PERRY & HEIDI WONG, TRUSTEE 1508 ALEMANY BLVD 94112',
+               'name': 'WONG FAMILY TRUST',
+               'record': 163},
+ 'dwelling_units': {'address': 'BILLIG HARVEY E III & MELAN  P O BOX 1414 CARMEL CA 93921',
+                    'name': 'BILLIG HARVEY E III & MELANIE',
+                    'record': 77550},
+ 'parcels': {'address': 'SHELL OWNERS ASSN-CALIF NORTHBROOK IL SHELL HOLDINGS INC  ATTN SH 40 SKOKIE BLVD #350 60062',
+             'name': 'SHELL OWNERS ASSN-CALIF',
+             'record': 2392}}
