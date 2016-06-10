@@ -32,6 +32,14 @@ And install it (this really just adds symlinks to cantools):
   - cd datamap/aemp
   - ctinit -r
 
+## Data
+
+Now you need to unzip your starter data:
+
+  - unzip data.db.zip
+
+## Server
+
 Then run the server:
 
   - ctstart
