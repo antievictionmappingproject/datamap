@@ -36,15 +36,16 @@ Then run the server:
 
   - ctstart
 
-Open a browser and navigate to http://localhost:8080 - that's it!
+It will probably ask you for a password. Make something up.
 
-Oh, it will probably ask you for a password. Make something up.
+Open a browser and navigate to http://localhost:8080 - that's it!
 
 ## Admin
 
 In addition to the map (at localhost:8080), there's an admin dashboard thing running on port 8002.
 
 So check out http://localhost:8002/db in your browser if you want to mess around with the database.
+It will ask you for the password you just made up.
 
 ## Model
 
