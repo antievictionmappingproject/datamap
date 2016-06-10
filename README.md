@@ -36,7 +36,7 @@ Then run the server:
 
   - ctstart
 
-It will probably ask you for a password. Make something up.
+It will ask you for a password. Make something up.
 
 Open a browser and navigate to http://localhost:8080 - that's it!
 
