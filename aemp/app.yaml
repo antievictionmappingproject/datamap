@@ -24,12 +24,12 @@
 #  static_dir: html
 # END mode: dynamic
 # START mode: static
-#- url: /js
-#  static_dir: js
-#- url: /.*\.html
-#  static_dir: html-static
+- url: /js
+  static_dir: js
+- url: /.*\.html
+  static_dir: html-static
 # END mode: static
 # START mode: production
-- url: /.*\.html
-  static_dir: html-production
+#- url: /.*\.html
+#  static_dir: html-production
 # END mode: production
