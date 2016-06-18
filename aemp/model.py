@@ -83,16 +83,16 @@ class Fire(db.ModelBase):
     losses = db.Integer()
     label = "date"
 
-class PoliceShooting(db.ModelBase):
+class PoliceMurder(db.ModelBase):
     date = db.DateTime()
-    victim = db.String()
+    name = db.String()
     age = db.Integer()
     race = db.String()
-    photo = db.Binary()
+    photo = db.String()
+    link = db.String()
     latitude = db.Float()
     longitude = db.Float()
-    blurb = db.Text()
-    label = "victim"
+    description = db.Text()
 
 class ZipCode(db.ModelBase):
     code = db.String()
