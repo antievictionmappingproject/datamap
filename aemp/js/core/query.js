@@ -23,7 +23,12 @@ core.query = {
 				modelName: "fire",
 				order: "-persons"
 			});
-		}
+		},
+		murders: function() {
+			core.query._build({
+				modelName: "policemurder"
+			});
+		},
 	},
 	_build: function(opts) {
 		new core.model.Pager(opts);
