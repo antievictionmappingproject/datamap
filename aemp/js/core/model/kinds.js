@@ -64,7 +64,10 @@ core.model.kinds.Base = CT.Class({
 });
 
 core.model.kinds.Policemurder = CT.Class({
-	CLASSNAME: "core.model.kinds.Policemurder"
+	CLASSNAME: "core.model.kinds.Policemurder",
+	icon: function(d) {
+		return "/img/murder.png"
+	},
 }, core.model.kinds.Base);
 
 core.model.kinds.BuildingBase = CT.Class({
