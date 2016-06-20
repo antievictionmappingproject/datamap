@@ -24,10 +24,15 @@ core.model.kinds.Base = CT.Class({
 			CT.dom.node(this.header(subdata, bdata), "div", "biggest bold"));
 	},
 	iline: function(d) {
+		var process = function(p) {
+			if ((typeof p == "string") && (p.slice(0, 4) == "http"))
+				return CT.parse.process(p);
+			return p || "(none)";
+		};
 		return function(p) {
 			return CT.dom.node([
 				CT.dom.node(p + ":", "div", "keycell"),
-				CT.dom.node(d[p] || "(none)", "span")
+				CT.dom.node(process(d[p]), "span")
 			]);
 		};
 	},
