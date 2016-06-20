@@ -7,30 +7,17 @@ core.model.kinds.Base = CT.Class({
 			that.pager.setMarkers(bdata.map(that.process));
 		};
 	},
+	header: function(subdata) {
+		return subdata.label;
+	},
 	list: function(dlist) {
 		var n = CT.dom.node();
 		CT.panel.triggerList(dlist, this.markers, n);
 		return n;
 	},
-	header: function(subdata) {
-		return subdata.address;
-	},
 	markers: function(subdata) {
 		this.mapify(subdata)([subdata]);
 		core.controller.map.markers[subdata.key].showInfo();
-	},
-	process: function(d) {
-		return {
-			key: d.key,
-			title: this.label(d),
-			address: d.address + ", san francisco",
-			position: {
-				lng: d.longitude,
-				lat: d.latitude
-			},
-			info: this.info(d),
-			icon: this.icon(d)
-		};
 	},
 	setHeader: function(subdata, bdata) {
 		CT.dom.setContent(core.controller.nodes.header,
@@ -42,6 +29,51 @@ core.model.kinds.Base = CT.Class({
 				CT.dom.node(p + ":", "div", "keycell"),
 				CT.dom.node(d[p] || "(none)", "span")
 			]);
+		};
+	},
+	process: function(d) {
+		return {
+			key: d.key,
+			position: {
+				lng: d.longitude,
+				lat: d.latitude
+			},
+			info: this.info(d),
+			icon: this.icon(d)
+		}
+	},
+	info: function(d) {
+		var iline = this.iline(d);
+		return CT.dom.node([
+			CT.dom.node(d.label, "div", "big bold"),
+			CT.db.eachProp(d.modelName, iline)
+		]);
+	},
+	icon: function(d) {
+		return null; // falls back to map default
+	},
+	init: function(pager) {
+		this.pager = pager;
+		this.opts = this.pager.opts;
+	}
+});
+
+core.model.kinds.Policemurder = CT.Class({
+	CLASSNAME: "core.model.kinds.Policemurder"
+}, core.model.kinds.Base);
+
+core.model.kinds.BuildingBase = CT.Class({
+	CLASSNAME: "core.model.kinds.BuildingBase",
+	process: function(d) {
+		return {
+			key: d.key,
+			address: d.address + ", san francisco",
+			position: {
+				lng: d.longitude,
+				lat: d.latitude
+			},
+			info: this.info(d),
+			icon: this.icon(d)
 		};
 	},
 	info: function(d) {
@@ -62,19 +94,12 @@ core.model.kinds.Base = CT.Class({
 					return "/img/" + icon.toLowerCase().replace(" ", "-") + ".png";
 			}
 		}
-	},
-	label: function(d) {
-		return d[d.label];
-	},
-	init: function(pager) {
-		this.pager = pager;
-		this.opts = this.pager.opts;
 	}
-});
+}, core.model.kinds.Base);
 
 core.model.kinds.Building = CT.Class({
 	CLASSNAME: "core.model.kinds.Building",
-}, core.model.kinds.Base);
+}, core.model.kinds.BuildingBase);
 
 core.model.kinds.BReffer = CT.Class({
 	CLASSNAME: "core.model.kinds.BReffer",
@@ -82,7 +107,6 @@ core.model.kinds.BReffer = CT.Class({
 		var b = CT.data.get(d.building);
 		return {
 			key: d.key,
-			title: this.label(b),
 			address: b.address + ", san francisco",
 			position: {
 				lng: b.longitude,
@@ -110,7 +134,7 @@ core.model.kinds.BReffer = CT.Class({
 		CT.dom.setContent(core.controller.nodes.header,
 			CT.dom.node(this.header(b, b), "div", "biggest bold"));
 	}
-}, core.model.kinds.Base);
+}, core.model.kinds.BuildingBase);
 
 core.model.kinds.Fire = CT.Class({
 	CLASSNAME: "core.model.kinds.Fire",
@@ -166,4 +190,4 @@ core.model.kinds.Owner = CT.Class({
 			CT.db.get(this.opts.modelName, this.mapify(subdata),
 				1000, 0, this.opts.order, this.opts.filters);
 	}
-}, core.model.kinds.Base);
+}, core.model.kinds.BuildingBase);
