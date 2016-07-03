@@ -1,5 +1,5 @@
 import os
-from cantools.util import read, writejson, log, set_log, close_log
+from cantools.util import read, log, set_log, close_log
 from model import db, Building
 
 def full_scan():
