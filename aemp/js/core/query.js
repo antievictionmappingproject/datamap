@@ -37,9 +37,9 @@ core.query = {
 		core.query.modal = new CT.modal.Prompt({
 			transition: "fade",
 			style: "single-choice",
-			cb: function(index) {
+			cb: function(mnode) {
 				CT.db.query({
-					modelName: core.controller.options[index],
+					modelName: mnode.innerHTML,
 					submit: core.query._build,
 					startYear: 2005,
 					showHelp: true
