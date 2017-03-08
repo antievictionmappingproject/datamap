@@ -192,8 +192,13 @@ core.model.kinds.Owner = CT.Class({
 				target = sord[0],
 				property = sord[1],
 				filters = this.opts.filters || {};
-			filters[property] = { comparator: "==", value: subdata.key };
-			CT.db.get(target, this.mapify(subdata), 1000, 0, null, filters);
+			if (sord.length == 3) {
+				filters[sord[2]] = { comparator: "==", value: subdata.key };
+				CT.db.get(property, this.mapify(subdata), 1000, 0, target + "." + property, filters);
+			} else {
+				filters[property] = { comparator: "==", value: subdata.key };
+				CT.db.get(target, this.mapify(subdata), 1000, 0, null, filters);
+			}
 		} else
 			CT.db.get(this.opts.modelName, this.mapify(subdata),
 				1000, 0, this.opts.order, this.opts.filters);
