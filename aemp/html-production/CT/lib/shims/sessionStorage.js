@@ -1,0 +1,1 @@
+window.sessionStorage={_cur:{},init:function(){var a=document.cookie;if(a.indexOf("ss=")!=-1)sessionStorage._cur=JSON.parse(a.split("ss=")[1].split(";")[0]);},getItem:function(a){return sessionStorage._cur[a];},setItem:function(a,b){sessionStorage._cur[a]=b;document.cookie="ss="+JSON.stringify(sessionStorage._cur);}};window.sessionStorage.init();;;

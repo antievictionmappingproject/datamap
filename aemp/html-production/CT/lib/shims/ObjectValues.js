@@ -1,0 +1,1 @@
+Object.values=function(a){var b,c=[];for(b in a)c.push(a[b]);return c;};;;
