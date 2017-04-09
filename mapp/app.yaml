@@ -19,16 +19,16 @@
 
 ## MODE SWITCHING -- DON'T MESS WITH (unless you know what you're doing)!
 # START mode: dynamic
-- url: /js
-  static_dir: js
-- url: /.*\.html
-  static_dir: html
-# END mode: dynamic
-# START mode: static
 #- url: /js
 #  static_dir: js
 #- url: /.*\.html
-#  static_dir: html-static
+#  static_dir: html
+# END mode: dynamic
+# START mode: static
+- url: /js
+  static_dir: js
+- url: /.*\.html
+  static_dir: html-static
 # END mode: static
 # START mode: production
 #- url: /.*\.html
