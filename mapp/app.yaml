@@ -1,0 +1,36 @@
+
+- url: /css
+  static_dir: css
+
+- url: /img
+  static_dir: img
+
+- url: /blob
+  static_dir: blob
+
+- url: /_db
+  script: _db.py
+
+- url: /_memcache
+  script: _memcache.py
+
+- url: /_pay
+  script: _pay.py
+
+## MODE SWITCHING -- DON'T MESS WITH (unless you know what you're doing)!
+# START mode: dynamic
+- url: /js
+  static_dir: js
+- url: /.*\.html
+  static_dir: html
+# END mode: dynamic
+# START mode: static
+#- url: /js
+#  static_dir: js
+#- url: /.*\.html
+#  static_dir: html-static
+# END mode: static
+# START mode: production
+#- url: /.*\.html
+#  static_dir: html-production
+# END mode: production
