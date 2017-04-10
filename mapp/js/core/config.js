@@ -34,7 +34,12 @@ core.config = {
             }, {
                 modelName: "policemurder"
             }
-        ]
+        ],
+        "live": {
+            "scouts": ["default"],
+            "obstacles": ["default"],
+            "objectives": ["default", "red"]
+        }
     }, 
     "log": {
         "exclude": [], 
