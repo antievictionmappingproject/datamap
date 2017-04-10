@@ -12,5 +12,6 @@ _scrape.py
 html/map
 css/ct.css
 css/map.css
+css/live.css
 js/CT
 js/map
