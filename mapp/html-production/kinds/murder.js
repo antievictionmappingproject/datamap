@@ -1,1 +1,1 @@
-map.core.model.kinds.Policemurder=CT.Class({CLASSNAME:"map.core.model.kinds.Policemurder",icon:function(a){return "/img/murder.png";}},map.core.model.kinds.Base);;
+map.core.model.kinds.Policemurder=CT.Class({CLASSNAME:"map.core.model.kinds.Policemurder",icon:function(a){return "/img/map/murder.png";}},map.core.model.kinds.Base);;
