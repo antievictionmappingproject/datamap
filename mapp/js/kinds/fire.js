@@ -1,7 +1,7 @@
 map.core.model.kinds.Fire = CT.Class({
 	CLASSNAME: "map.core.model.kinds.Fire",
 	icon: function(d) {
-		return "/img/fire.png";
+		return "/img/map/fire.png";
 	},
 	info: function(d) {
 		var b = CT.data.get(d.building);
