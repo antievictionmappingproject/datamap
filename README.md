@@ -8,14 +8,7 @@ Open a terminal.
 
 Get the framework, cantools:
 
-  - git clone https://github.com/bubbleboy14/cantools.git
-
-Install it:
-
-  - cd cantools
-  - python setup.py install
-
-There's a good chance you'll need to sudo that last command, depending on how your system is set up.
+  - https://github.com/bubbleboy14/cantools#repository-installation-full
 
 ### datamap
 
@@ -29,14 +22,8 @@ And get it:
 
 And install it (this really just adds symlinks to cantools):
 
-  - cd datamap/aemp
+  - cd datamap/mapp
   - ctinit -r
-
-## Data
-
-Now you need to unzip your starter data:
-
-  - unzip data.db.zip
 
 ## Server
 
@@ -46,11 +33,11 @@ Then run the server:
 
 It will ask you for a password. Make something up.
 
-Open a browser and navigate to http://localhost:8080 - that's it!
+Open a browser and navigate to http://localhost:8080/map - that's it!
 
 ## Admin
 
-In addition to the map (at localhost:8080), there's an admin dashboard thing running on port 8002.
+In addition to the map (on port 8080), there's an admin dashboard thing running on port 8002.
 
 So check out http://localhost:8002/db in your browser if you want to mess around with the database.
 It will ask you for the password you just made up.
@@ -74,4 +61,4 @@ That's it!
 
 This runs (by default) on port 8080. If you add a new model or something, you might
 want to also define some mappy behavior for it. You can do this in kinds.js, which
-lives in the js/core/model directory.
+lives in the js/map/core/model directory.
