@@ -52,8 +52,8 @@ Say you have some big csv or something that's chalk full of too much information
 and you're too tired to read it the old fashioned way. Look no further than the
 scrapers, which live in the scrapers directory. Make a new one if you want.
 
-If you do, you can run it by adding the name of your scraper to the list on line
-5 of scrape.py and hitting http://localhost:8080/scrape?scraper=whateverYourScraperIsCalled
+If you do, you can run it by adding the name of your scraper to the list on line 6 of ct.cfg
+(MAP_SCRAPERS) and hitting http://localhost:8080/scrape?scraper=whateverYourScraperIsCalled
 
 That's it!
 
