@@ -1,0 +1,1 @@
+MediaStream.prototype.stop=function(){this.getAudioTracks().forEach(function(a){a.stop();});this.getVideoTracks().forEach(function(a){a.stop();});};;
